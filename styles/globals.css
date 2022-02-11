@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @layer base {
+  @font-face {
+    font-family: calibri;
+    font-weight: 300;
+    src: url(/fonts/Calibri-Light.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: calibri;
+    font-weight: 500;
+    src: url(/fonts/Calibri-Regular.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: calibri;
+    font-weight: 700;
+    src: url(/Calibri-Bold.TTF) format("otf");
+  }
+} */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+.easeOutBack {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.subscribeBG {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(232, 1, 1, 1) 0%,
+    rgba(210, 126, 8, 1) 100%
+  );
+}
+
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
+}
+.hideScrollBar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.rotateGlobeX {
+  animation: rotationX 20s infinite linear;
+}
+
+@keyframes rotationX {
+  25% {
+    transform: translateX(155px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-155px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.rotateGlobeY {
+  animation: rotationY 20s infinite linear;
+}
+
+@keyframes rotationY {
+  25% {
+    transform: translateY(155px);
+  }
+  50% {
+    transform: translateY(310px);
+  }
+  75% {
+    transform: translateY(155px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.rotate.active {
+  width: 100%;
+  height: 100%;
+  animation: circle 10s infinite linear;
+}
+.rotate.active .counterrotate {
+  width: 70px;
+  height: 70px;
+  animation: ccircle 10s infinite linear;
+}
+
+@keyframes circle {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes ccircle {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+.rotateYInf {
+  animation: rotationY 5s infinite linear;
+}
+@keyframes rotationY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
